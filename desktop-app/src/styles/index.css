@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme tokens (RGB triples) – light by default, overridden by the .dark class (dark is the app default). */
+:root { --surface: 241 245 249; --panel: 255 255 255; --line: 203 213 225; --ink: 15 23 42; --muted: 100 116 139; --accent: 79 70 229; }
+.dark { --surface: 2 6 23; --panel: 15 23 42; --line: 51 65 85; --ink: 226 232 240; --muted: 148 163 184; --accent: 99 102 241; }
+
+html, body, #root { height: 100%; margin: 0; }
+body { font-family: 'Segoe UI', system-ui, sans-serif; @apply bg-surface text-ink; }
+button { @apply transition-colors duration-150; }
+.btn { @apply inline-flex items-center justify-center gap-1.5 rounded-lg border border-line bg-panel px-3 py-1.5 text-sm hover:bg-line/40 disabled:opacity-50 disabled:cursor-not-allowed; }
+.btn-primary { @apply border-accent bg-accent text-white hover:bg-accent/90; }
+.btn-danger { @apply border-red-500/50 text-red-500 hover:bg-red-500/10; }
+.card { @apply rounded-xl border border-line bg-panel; }
+.input { @apply w-full rounded-lg border border-line bg-surface px-3 py-2 text-sm outline-none focus:border-accent; }
+.page-enter { animation: fade .18s ease-out; }
+@keyframes fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+::-webkit-scrollbar { width: 10px; } ::-webkit-scrollbar-thumb { @apply rounded bg-line; }

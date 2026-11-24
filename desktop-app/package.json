@@ -1,0 +1,40 @@
+{
+  "name": "video-downloader-pro",
+  "productName": "Video Downloader Pro",
+  "version": "1.0.0",
+  "description": "Desktop video downloader with Chrome extension integration",
+  "main": "electron/main.js",
+  "author": "Video Downloader Pro",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev:renderer": "vite",
+    "dev:electron": "wait-on tcp:127.0.0.1:5173 && cross-env NODE_ENV=development electron .",
+    "dev": "concurrently -k \"npm:dev:renderer\" \"npm:dev:electron\"",
+    "build:renderer": "vite build",
+    "start": "npm run build:renderer && electron .",
+    "dist": "npm run build:renderer && electron-builder --win nsis",
+    "test": "node --test \"../tests/**/*.test.js\""
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.1.0",
+    "cross-env": "^7.0.3",
+    "electron": "^37.2.0",
+    "electron-builder": "^25.1.8",
+    "ffmpeg-static": "^5.2.0",
+    "postcss": "^8.4.49",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^3.4.17",
+    "vite": "^5.4.11",
+    "wait-on": "^8.0.1"
+  }
+}

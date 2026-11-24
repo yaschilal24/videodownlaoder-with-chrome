@@ -1,0 +1,20 @@
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body { width: 340px; margin: 0; padding: 14px; background: #0b1120; color: #e2e8f0; font: 13px/1.4 "Segoe UI", system-ui, sans-serif; }
+header { display: flex; gap: 10px; align-items: center; margin-bottom: 12px; }
+h1 { font-size: 15px; margin: 0 0 3px; }
+.pill { font-size: 11px; padding: 2px 8px; border-radius: 999px; }
+.pill-on { background: #14532d; color: #86efac; } .pill-off { background: #7f1d1d; color: #fca5a5; } .pill-warn { background: #78350f; color: #fcd34d; }
+section { margin-bottom: 10px; }
+label { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: .04em; color: #94a3b8; margin-bottom: 3px; }
+.title { font-weight: 600; max-height: 2.8em; overflow: hidden; }
+.url { color: #94a3b8; font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hint { color: #94a3b8; font-size: 11px; margin: 0 0 6px; }
+.row { display: flex; gap: 6px; }
+input { flex: 1; padding: 7px 9px; border-radius: 8px; border: 1px solid #334155; background: #111827; color: inherit; letter-spacing: .2em; }
+button { padding: 8px 12px; border-radius: 8px; border: 1px solid #334155; background: #1e293b; color: inherit; cursor: pointer; }
+button:hover:not(:disabled) { background: #334155; } button:disabled { opacity: .5; cursor: default; }
+button.primary { background: #4f46e5; border-color: #4f46e5; flex: 1; } button.primary:hover:not(:disabled) { background: #6366f1; }
+footer { display: flex; gap: 8px; }
+.message { padding: 8px 10px; border-radius: 8px; margin-bottom: 10px; font-size: 12px; }
+.message.ok { background: #14532d; color: #bbf7d0; } .message.err { background: #7f1d1d; color: #fecaca; }

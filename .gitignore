@@ -1,0 +1,7 @@
+node_modules/
+dist/
+release/
+desktop-app/bin/*
+!desktop-app/bin/.gitkeep
+*.log
+.env

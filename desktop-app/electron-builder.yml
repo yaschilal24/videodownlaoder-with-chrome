@@ -1,0 +1,37 @@
+appId: com.videodownloaderpro.app
+productName: Video Downloader Pro
+copyright: Copyright © 2026 Video Downloader Pro
+directories:
+  output: release
+files:
+  - electron/**/*
+  - backend/**/*
+  - dist/**/*
+  - package.json
+  - "!**/*.test.js"
+extraResources:
+  - from: ../shared
+    to: shared
+  - from: bin
+    to: bin
+    filter: ["**/*", "!.gitkeep"]
+asar: true
+win:
+  target:
+    - target: nsis
+      arch: [x64]
+  icon: assets/icon.ico
+protocols:
+  - name: Video Downloader Pro
+    schemes: [vdp]
+nsis:
+  installerIcon: assets/icon.ico
+  uninstallerIcon: assets/icon.ico
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: always
+  createStartMenuShortcut: true
+  shortcutName: Video Downloader Pro
+  artifactName: VideoDownloaderPro-Setup.${ext}
+  deleteAppDataOnUninstall: false
